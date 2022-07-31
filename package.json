@@ -1,7 +1,31 @@
 {
+  "name": "CYPRESS_POC_PROJECT",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress run",
+    "headTest": "npm run test -- --headed",
+    "chromeTest": "npm run test -- --browser chrome",
+    "recordDashboardTest": "npm run test -- --record --key 7423c376-395c-4428-a55c-04050940ecf8 --reporter mochawesome",
+    "GreenKartTest": "npm run test -- --spec \"cypress//e2e//examples//Greenkart//*\""
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "cypress/cucumber-json",
+      "filePrefix": "",
+      "fileSuffix": ".cucumber"
+    }
+  },
   "devDependencies": {
     "cypress": "^10.3.1",
+    "cypress-cucumber-preprocessor": "^4.3.1",
     "cypress-iframe": "^1.0.1",
-    "eslint-plugin-cypress": "^2.12.1"
+    "eslint-plugin-cypress": "^2.12.1",
+    "mocha": "^10.0.0",
+    "mochawesome": "^7.1.3",
+    "multiple-cucumber-html-reporter": "^1.21.5"
   }
 }

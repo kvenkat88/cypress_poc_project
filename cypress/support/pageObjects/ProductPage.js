@@ -2,12 +2,12 @@
 
 class ProductPage{
 
-    constructor(){
-        this.checkOutButtonLocator = '#navbarResponsive > .navbar-nav > .nav-item > .nav-link'
-    }
+    // constructor(){
+    //     this.checkOutButtonLocator = '#navbarResponsive > .navbar-nav > .nav-item > .nav-link'
+    // }
 
     checkOutButton(){
-        return cy.get(this.checkOutButtonLocator)
+        return cy.get('#navbarResponsive > .navbar-nav > .nav-item > .nav-link')
     }
 
     checkoutToComplete(){

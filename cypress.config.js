@@ -1,4 +1,5 @@
 const { defineConfig } = require("cypress");
+const cucumber = require('cypress-cucumber-preprocessor').default;
 
 module.exports = defineConfig({
     projectId: 'umj6vb',
@@ -6,7 +7,7 @@ module.exports = defineConfig({
     chromeWebSecurity: false,
     defaultCommandTimeout: 8000,
     pageLoadTimeout: 30000,
-    //reporter: "mochaawesome",
+    reporter: "mochawesome",
     retries: {
       runMode: 1,
       openMode: 1
@@ -18,9 +19,13 @@ module.exports = defineConfig({
       // If we custom folder name instead of e2e, we can use specPattern key to let cypress know that
       // specPattern: 'cypress/integration/examples/*.js'
 
-      // setupNodeEvents(on, config) {
-      //   // implement node event listeners here
-      // },
+      setupNodeEvents(on, config) {
+        // implement node event listeners here
+        on('file:preprocessor', cucumber())
+      },
+      // To identify Cucumber BDD Files
+      // for cucumber feature files, change e2e folder name to integration folder name
+      //specPattern: 'cypress/integration/examples/BDD/*.feature',
       env: {
         login_url: '/login',
       }

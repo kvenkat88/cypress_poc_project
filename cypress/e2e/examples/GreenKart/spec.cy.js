@@ -4,7 +4,7 @@
 
 describe("Hello World to Cypress", () => {
   it("Launch the Kitchen Sink App", () => {
-    cy.visit("/")
+    cy.visit("https://rahulshettyacademy.com/seleniumPractise")
     cy.get('.search-keyword').type('ca')
     cy.wait(2000)
     // cy.get('.product:visible').should('have.length',4) //retrieve only visible elements in css, if not visible, length retrieved is 5
