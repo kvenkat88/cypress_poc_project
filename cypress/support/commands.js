@@ -33,3 +33,13 @@ Cypress.Commands.add('selectProduct', (productName) => {
     })
 })
 
+
+Cypress.Commands.add("LoginAPI", () => {
+    cy.request('POST', "https://rahulshettyacademy.com/api/ecom/auth/login",
+                        {"userEmail":"kvenkatkrisit@gmail.com","userPassword":"Password-1"}
+                ).then((response) => {
+                    expect(response.status).to.equal(200)
+                    Cypress.env('token',response.body.token)
+                })
+})
+

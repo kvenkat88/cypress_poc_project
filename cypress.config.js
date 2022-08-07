@@ -1,5 +1,5 @@
 const { defineConfig } = require("cypress");
-const cucumber = require('cypress-cucumber-preprocessor').default;
+// const cucumber = require('cypress-cucumber-preprocessor').default;
 
 module.exports = defineConfig({
     projectId: 'umj6vb',
@@ -20,12 +20,12 @@ module.exports = defineConfig({
       // specPattern: 'cypress/integration/examples/*.js'
 
       setupNodeEvents(on, config) {
-        // implement node event listeners here
-        on('file:preprocessor', cucumber())
+        // implement node event listeners here for cucumber BDD tests
+        // on('file:preprocessor', cucumber())
       },
       // To identify Cucumber BDD Files
       // for cucumber feature files, change e2e folder name to integration folder name
-      //specPattern: 'cypress/integration/examples/BDD/*.feature',
+      // specPattern: 'cypress/integration/examples/BDD/*.feature',
       env: {
         login_url: '/login',
       }
