@@ -14,3 +14,7 @@ https://medium.com/egnyte-engineering/3-steps-to-awesome-test-reports-with-cypre
 https://dzone.com/articles/cypress-generate-html-results-with-screenshot
 
 https://dzone.com/articles/cypress-generate-html-results-with-screenshot
+
+https://github.com/GaveenNayanjith/Cypress-Demo-BStack_Demo
+
+https://github.com/nareshnavinash/Cypress-PageObjectModel
