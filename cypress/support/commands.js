@@ -33,6 +33,19 @@ Cypress.Commands.add('selectProduct', (productName) => {
     })
 })
 
+Cypress.Commands.add('getIframeBody', (selector) => {
+    // get the iframe > document > body
+    // and retry until the body element is not empty
+    cy.log('getIframeBody')
+  
+    return cy
+        .get(selector, { log: false,timeout:10000 })
+        .its('0.contentDocument.body', { log: false }).should('not.be.empty')
+        // wraps "body" DOM element to allow
+        // chaining more Cypress commands, like ".find(...)"
+        // https://on.cypress.io/wrap
+        .then((body) => cy.wrap(body, { log: false }))
+  })
 
 Cypress.Commands.add("LoginAPI", () => {
     cy.request('POST', "https://rahulshettyacademy.com/api/ecom/auth/login",
