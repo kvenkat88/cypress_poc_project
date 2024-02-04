@@ -18,3 +18,24 @@ https://dzone.com/articles/cypress-generate-html-results-with-screenshot
 https://github.com/GaveenNayanjith/Cypress-Demo-BStack_Demo
 
 https://github.com/nareshnavinash/Cypress-PageObjectModel
+
+
+cypress run --browser chrome
+
+cypress open -> open the cypress app with page for testing
+
+
+##### Commands/methds
+cy.visit("url")
+
+
+#### Class Selectors
+    1. #param or input#Email - using id selector
+    2. .classname
+    3. <p> elements with class="center" is p.center
+    4. input[type=’submit’]
+    5. input#Passwd[name^='Pass']
+    6. input#Passwd[name$='wd']
+    7. <HTML tag><[attribute*=sub string]>
+    8. css=font:contains(“Password:”)
+    9. 

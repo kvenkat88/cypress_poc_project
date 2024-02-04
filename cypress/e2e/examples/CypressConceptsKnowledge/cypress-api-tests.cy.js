@@ -9,7 +9,5 @@ describe("Cypress API Test Functionality", function(){
             cy.log(response)
             expect(response.body).to.have.property('userId', 1)
           })
-
-        
     })
 })

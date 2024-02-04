@@ -1,4 +1,4 @@
-/// <reference types="CYpress" />
+/// <reference types="Cypress" />
 import neatCSV from 'neat-csv'
 let productName
 

@@ -1,6 +1,6 @@
 /// <reference types="Cypress" />
 
-describe.skip("Darag and Drop Check", ()=>{
+describe.skip("Drag and Drop Check", ()=>{
     it("Drag and Drop feature Validation", ()=>{
         cy.visit("https://www.w3schools.com/html/html5_draganddrop.asp")
         const dataTransfer = new DataTransfer()
@@ -23,7 +23,7 @@ describe("Knowledge Practise tests", ()=>{
 
     it.skip("Radio Button Selection Validations", ()=>{
         cy.get('#radio-btn-example fieldset label').should('have.length',3).each(($el,index,$list)=>{
-            cy.log(cy.wrap($list).eq(index).invoke('text'))
+            cy.log(cy.wrap($list).eq(index).invoke('val'))
         })
 
         cy.get('#radio-btn-example label input').check(['radio2']).should('be.checked','radio2')

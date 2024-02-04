@@ -29,8 +29,5 @@ module.exports = defineConfig({
       env: {
         login_url: '/login',
       }
-      
-
-
     },
 });
